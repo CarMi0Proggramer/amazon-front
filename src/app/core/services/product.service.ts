@@ -8,7 +8,8 @@ import { Product } from '../../shared/models/product';
 })
 export class ProductsService {
   private readonly http = inject(HttpClient);
-  private readonly baseUrl = 'http://localhost:3000/products';
+  private readonly baseUrl =
+    'https://amazon-back-production.up.railway.app/products';
 
   getAll(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl);

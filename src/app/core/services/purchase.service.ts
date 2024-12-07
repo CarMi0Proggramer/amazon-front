@@ -8,7 +8,8 @@ import { SavePurchaseDto } from '../../shared/models/save-purchase';
 })
 export class PurchaseService {
   private readonly http = inject(HttpClient);
-  private readonly baseUrl = 'http://localhost:3000/purchase';
+  private readonly baseUrl =
+    'https://amazon-back-production.up.railway.app/purchase';
 
   save(savePurchaseDto: SavePurchaseDto): Observable<{ message: string }> {
     return this.http.post<{ message: string }>(this.baseUrl, savePurchaseDto);
