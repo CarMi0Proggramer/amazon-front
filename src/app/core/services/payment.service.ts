@@ -8,8 +8,7 @@ import { PaymentDto } from '../../shared/models/payment';
 })
 export class PaymentService {
   private readonly http = inject(HttpClient);
-  private readonly baseUrl =
-    'https://amazon-back-production.up.railway.app/payment';
+  private readonly baseUrl = 'https://amazon-back-mfu7.onrender.com/payment';
 
   checkout(paymentDto: PaymentDto): Observable<{ checkoutUrl: string }> {
     return this.http.post<{ checkoutUrl: string }>(
