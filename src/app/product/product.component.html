@@ -4,6 +4,7 @@
       <div class="relative size-64 sm:size-72 lg:size-96">
         @if (product?.urlImg) {
         <img
+          class="object-contain object-center"
           [ngSrc]="product?.urlImg ?? ''"
           alt="Product Image"
           priority
