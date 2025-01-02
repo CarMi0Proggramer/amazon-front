@@ -4,7 +4,12 @@
   class="transition-transform hover:scale-105 h-full bg-white rounded-md p-6 flex flex-col shadow-md items-center max-w-80"
 >
   <div class="relative size-24">
-    <img [ngSrc]="product().urlImg" alt="Product Image" fill="" />
+    <img
+      class="object-contain object-center"
+      [ngSrc]="product().urlImg"
+      alt="Product Image"
+      fill=""
+    />
   </div>
   <div class="self-start mt-4 flex flex-col gap-1">
     <h4 class="font-bold text-lg text-pretty">{{ product().name }}</h4>
